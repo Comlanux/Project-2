@@ -1,3 +1,9 @@
+h2 {
+    font-weight: 900;
+}
+
+
+
 .filter-button {
 	align-items: center;
     border-radius: 3rem;
@@ -7,6 +13,8 @@
     font-size: 1.25rem;
     padding: 0 1.5625rem;
 }
+
+
 .filter-icon {
 	align-items: center;
     background-color: #deebff;
@@ -79,16 +87,42 @@ h5 {
 
 .card-hori {
     flex-direction: row;
-
 }
 
 .card-img-no-border {
     border: none;
-    border-radius: 1.25rem 1.25rem 0 0;
+    width: 100%;
     object-fit: cover;
     position: relative;
-
 }
+
+.bluestar {
+    color: #0065fc;
+}
+
+.greystar {
+    color: #f2f2f2;
+}
+
+.accommodations-container {
+    display: flex;
+    background-color #f2f2f2;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .accommodations-container > div {
+    background-color: white;
+    margin: 8px; 
+  }
+
+  .most-popular-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 32rem;
+    justify-items: center;
 
 
 
