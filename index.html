@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://kit.fontawesome.com/f5ee220a84.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,6 +14,7 @@
 
 <body>
 
+  <div class="container">
   <nav class="top-of-page">
     <div class="logo">
       <img src="./images/logo/Reservia.svg" alt="Reservia Logo">
@@ -57,6 +60,8 @@
 
   <div class="d-flex flex-direction-column-reverse flex-direction-sm-row">
     <div class="accommodations-container">
+      <h2>Accommodations in Marseille</h2>
+      <div class="accommodations-grid">
       <div class="card">
         <img src="./images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -136,14 +141,14 @@
           <span class="bluestar"><i class="fas fa-star"></i></span></a>
         </div>
       </div>
+      </div>
     </div>
 
-    
-      <div class="most-popular-header">
-        <h2 class="most-popular-header-text">Most Popular</h2>
-        <i class="fas fa-chart-line fa-2x chartline"></i>
-    </div>
+  <div>
     <div class="most-popular-container">
+      <h2>Most Popular</h2>
+      <i class="fas fa-chart-line fa-2x chartline"></i>
+      <div class="most-popular-grid">
       <div class="card card-hori">
         <div class="card-img-left" style="background-image: url(./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);"></div>
         <div class="card-body">
@@ -189,8 +194,14 @@
         </div>
       </div>
     </div>
-  </div class="activities-container">
-  <div class="card" style="width: 40rem;">
+    </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="activities-container">
+      <h2>Activities in Marseille</h2>
+  <div class="card">
     <img src="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
       class="card-img-top card-img-no-border" alt="...">
     <div class="card-body">
@@ -198,7 +209,7 @@
     </div>
   </div>
 
-  <div class="card" style="width: 40rem;">
+  <div class="card">
     <img src="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg" class="card-img-top card-img-no-border"
       alt="...">
     <div class="card-body">
@@ -206,7 +217,7 @@
     </div>
   </div>
 
-  <div class="card" style="width: 40rem;">
+  <div class="card">
     <img src="./images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" class="card-img-top card-img-no-border"
       alt="...">
     <div class="card-body">
@@ -214,7 +225,7 @@
     </div>
   </div>
 
-  <div class="card" style="width: 40rem;">
+  <div class="card">
     <img src="./images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
       class="card-img-top card-img-no-border" alt="...">
     <div class="card-body">
@@ -223,7 +234,7 @@
     </div>
   </div>
 
-  <div class="card" style="width: 40rem;">
+  <div class="card">
     <img src="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg" class="card-img-top card-img-no-border"
       alt="...">
     <div class="card-body">
@@ -239,10 +250,11 @@
       <h5 class="card-title">Longchamp Park</h5>
       <a href="#" class="btn btn-primary"></a>
     </div>
+    </div>
+    </div>
   </div>
   </div>
-
-
+  
 </body>
 
 </html>
