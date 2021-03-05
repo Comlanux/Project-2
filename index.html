@@ -19,6 +19,12 @@
       <div class="logo">
         <img src="./images/logo/Reservia.svg" alt="Reservia Logo">
       </div>
+      <div class="navbar">
+        <a class="navbar-link" href="#accommodations">Accommodations</a>
+        <a class="navbar-link" href="#activities">Activities</a>
+        <a class="navbar-link" href="#sign up ">Sign Up</a>
+      </div>
+      <span class="navbar-tab"></span>
     </nav>
 
     <div class="top-title-and-subtitle">
@@ -27,7 +33,7 @@
     </div>
 
     <div class="search-row">
-      <i class="fas fa-map-marker-alt"></i>
+      <i class="fas fa-map-marker-alt mapmarker"></i>
       <input class="search-box" placeholder="Marseille,France" type="text">
       <div class="search-button">
         Search
@@ -35,28 +41,28 @@
     </div>
 
     <div class="filter-row">
-      <div class="Filters">
+      <div class="Filters-header">
         <h2>Filters</h2>
-        <button class="filter-button">
-          <span class="filter-icon"><i class="fas fa-money-bill-wave"></i></span>
-          Low cost
-        </button>
-
-        <button class="filter-button">
-          <span class="filter-icon"><i class="fas fa-child"></i></span>
-          Family-friends
-        </button>
-
-        <button class="filter-button">
-          <span class="filter-icon"><i class="fas fa-heart"></i></span>
-          Romantic
-        </button>
-
-        <button class="filter-button">
-          <span class="filter-icon"><i class="fas fa-dog"></i></span>
-          Pets allowed
-        </button>
       </div>
+      <button class="filter-button">
+        <span class="filter-icon"><i class="fas fa-money-bill-wave"></i></span>
+        Low cost
+      </button>
+
+      <button class="filter-button">
+        <span class="filter-icon"><i class="fas fa-child"></i></span>
+        Family-friends
+      </button>
+
+      <button class="filter-button">
+        <span class="filter-icon"><i class="fas fa-heart"></i></span>
+        Romantic
+      </button>
+
+      <button class="filter-button">
+        <span class="filter-icon"><i class="fas fa-dog"></i></span>
+        Pets allowed
+      </button>
     </div>
 
     <div class="information-row">
@@ -230,9 +236,11 @@
 
   <div>
     <div class="activities-container">
-      <h2>Activities in Marseille</h2>
+      <div class="activities-header">
+        <h2 class="mt-0">Activities in Marseille</h2>
+      </div>
       <div class="activities-grid">
-        <div class="card">
+        <div class="activitycard old-port-card ">
           <img src="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
             class="card-img-top card-img-no-border" alt="...">
           <div class="card-body">
@@ -240,50 +248,78 @@
           </div>
         </div>
 
-        <div class="card">
-          <img src="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
-            class="card-img-top card-img-no-border" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Pomegues Fort</h5>
+        <div class="column-2">
+          <div class="activitycard pomegues fort-card">
+            <img src="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+              class="card-img-top card-img-no-border" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pomegues Fort</h5>
+            </div>
+          </div>
+
+          <div class="activitycard frioul-card">
+            <img src="./images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+              class="card-img-top card-img-no-border" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Frioul Island</h5>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <img src="./images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
-            class="card-img-top card-img-no-border" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Frioul Island</h5>
-          </div>
-        </div>
-
-        <div class="card">
+        <div class="activitycard calanque-card">
           <img src="./images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
             class="card-img-top card-img-no-border" alt="...">
           <div class="card-body">
             <h5 class="card-title">Calanques National Park</h5>
           </div>
         </div>
+        <div>
+          <div class="column-4">
+            <div class="activitycard notre-dame-card">
+              <img src="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                class="card-img-top card-img-no-border" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Notre-Dame-de-la-Garde</h5>
 
-        <div class="card">
-          <img src="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-            class="card-img-top card-img-no-border" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Notre-Dame-de-la-Garde</h5>
+              </div>
+            </div>
 
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="./images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
-            class="card-img-top card-img-no-border" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Longchamp Park</h5>
+            <div class=" activitycard longchamp-card">
+              <img src="./images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+                class="card-img-top card-img-no-border" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Longchamp Park</h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   </div>
+
+  <footer class="footer">
+    <div class="row">
+      <div class="column1">
+        <h3 class="tittle">About</h3>
+        <p>Site Map</p>
+        <p>General Terms and Conditions</p>
+        <p>Data and Privacy</p>
+      </div>
+
+      <div class="column2">
+        <h3 class=" footer-title2">Our Accommodations</h3>
+        <p>Quality Assessment</p>
+        <p>You have a Hotel?</p>
+      </div>
+
+      <div class="column3">
+        <h3 class="footer-tille3">Assistance</h3>
+        <p>Help Desk</p>
+        <p>Contact Us</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
