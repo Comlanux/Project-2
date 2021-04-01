@@ -1,6 +1,14 @@
 * {
     box-sizing: border-box;
     font-family: Raleway;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 375px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 
@@ -16,42 +24,74 @@ h5 {
     margin-top: 0;
 }
 
-.top-of-page{
-    display: flex;
-    justify-content: space-around;
+#top-of-page {
+    margin-bottom: 25px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    float: left;
-    
+    float: left;   
 }
 
 .navbar {
+    list-style: none;
     display: flex;
-    float: right;
-    font-size: 1.1rem;
-    justify-content: flex-end;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-flow: wrap;
+}
+
+.navbar li {
+    width: 50%;
+}
+
+.navbar li:nth-child(1) {
+    order: 1;
+}
+
+.navbar li:nth-child(2) {
+    order: 3;
+    text-align: center;
+}
+
+.navbar li:nth-child(3) {
+    order: 4;
+    text-align: center;
+}
+
+.navbar li:nth-child(4) {
+    order: 2;
+    text-align: right;
 }
 
 .navbar-link {
-    font-weight: 800;
-    line-height: 5rem;
-    padding: 2rem;
-    
-    
-}
-
-
-
-
-a {
-    color: #0065fc;
+    display: block;
+    padding: 13px 15px 15px 15px;
+    color: black;
     text-decoration: none;
-    
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: white;
 }
+
+.navbar-link:hover {
+    color: blue;
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-color: blue;
+}
+
+.navbar-link.signup {
+    color: blue;
+    font-weight: bold;
+}
+
+.navbar-link.signup:hover {
+    border: none;
+    padding: 15px;
+}
+
 
 .mapmarker {
     background-color: #f2f2f2;
@@ -87,6 +127,7 @@ a {
     display: inline-flex;
     font-size: 1.25rem;
     padding: 0 1.5625rem;
+    background: white;
 }
 
 
@@ -108,21 +149,19 @@ a {
     align-items: center;
     display: flex;
     gap: 1.5rem;
-    padding: 10px;
 
-}
-
-.information {
-    padding: 20px;
 }
 
 .info-icon {
-    background-color: white;
-    border: 0.125rem solid #f2f2f2;
-    border-radius: 3.125rem;
-    color: #0065fc;
-    padding: 4px 9px;
-    margin-right: 1rem;
+border: 0.125rem solid #f2f2f2;
+border-radius: 3.125rem;
+color: #0065fc;
+margin-right: 1rem;
+justify-content: center;
+width: 30px;
+display: inline-flex;
+height: 30px;
+align-items: center;
 }
 
 .card-link {
@@ -142,7 +181,7 @@ a {
     border-radius: 0 0 1.25rem 1.25rem;
 }
 .card-body {
-    padding: 10px 20px;
+    padding: 30px 25px;
     width: 100%;
 }
 .card-title {
@@ -172,6 +211,7 @@ a {
     border: none;
     width: 100%;
     position: relative;
+    
 }
 
 .activitycard {
@@ -179,15 +219,21 @@ a {
     border-radius: 21px;
     box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2) ;
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .card-img-top {
     border-radius: 1.25rem 1.25rem 0 0;
-	height: 8.125rem;
     object-fit: cover;
     position: relative;
     width: 100%;
 }
+
+.pomegues-card .card-img-top {
+    height: 177px;
+}  
 
 
 .bluestar {
@@ -226,7 +272,8 @@ a {
       margin-left: 2rem;
       color: black;
       font-size: 1.2rem;
-      font-weight: 900;  
+      font-weight: 900; 
+      margin-top: 20px; 
  }
 
   .col {
@@ -258,21 +305,23 @@ a {
   .most-popular-header {
       display: flex;
       justify-content: flex-start;
+      margin: 0px 20px 15px 20px;
       
+  }
+
+  .accommodations-header {
+    margin: 0px 20px 15px 20px;
   }
 
   .most-popular-header-text {
       margin-left: 3rem;
   }
 
-  .activities-grid {
-        display: flex;
-        justify-content: center;
-  }
 
   .activities-header {
         display: flex;
         justify-content: flex-start;
+        margin-top: 40px;
 
   }
 
@@ -303,7 +352,6 @@ a {
   .chartline {
       align-self: center;
       margin-left: auto;
-      margin-right: 3.125rem;
   }
 
   .search-row {
@@ -336,8 +384,12 @@ a {
     width: 6rem;
 }
 
+ .search {
+     display: flex;
+ }
+
 .search-icon {
-    color: #0065fc;
+    color: white;
 }
 
 .footer {
@@ -349,21 +401,38 @@ a {
     justify-content: space-around;
 }
 
+.activities-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.card-tall {
+    height: 100%;
+}
+
+.card-tall .card-img-top {
+    flex-grow: 1;
+}
+
+.col-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-right: 15px;
+    padding-right: 15px;
+}
+
+
+
 @media(min-width:880px) {
     .column-2, .column-4 {
-          margin: 40px;
+          padding: 0 40px;
     }
 
     .activities-container {
-        align-items: center;
         flex-direction: column;
         gap: 20px;
-        height: auto;
-    }
-    .activities-grid{
-        align-items: center;
-        flex-direction: column;
-        gap: 2em;
         height: auto;
     }
     
@@ -398,12 +467,42 @@ a {
     
 }
 
-@media(min-width:880px) {
-    .activitycard, .old-port-card, .pomegues-card, .frioul-card, .calanque-card, .notre-dame-card, .longchamp-card{
-        height: 20em;
-        width: 50em;
+
+@media (min-width: 400px) {
+    .navbar li {
+      width: auto;
     }
-}
+    
+    .navbar li:nth-child(1) {
+      order: 1
+    }
+  
+    .navbar li:nth-child(2) {
+      margin-left: auto;
+      order: 2;
+    }
+  
+    .navbar li:nth-child(3) {
+      order: 3;
+    }
+  
+    .navbar li:nth-child(4) {
+      order: 4;
+    }
+  
+    .navbar-link {
+      display: inline-block;
+      border-top-width: 2px;
+          border-bottom-width: 0;
+    }
+  
+    .navbar-link:hover {
+      border-top-width: 2px;
+          border-bottom-width: 0;
+    }
+  }
+
+
 
 
 

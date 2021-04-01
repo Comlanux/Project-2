@@ -10,77 +10,81 @@
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <link href="./css/mobile.css" media="screen and (max-width:320px)" rel="stylesheet">
+  <link href="./css/sml-tablet.css" media="screen and (min-width: 321px) and (max-width: 480px)" rel="stylesheet">
+  <link href="./css/lrg-tablet.css" media="screen and (min-width: 481px) and (max-width: 765px)" rel="stylesheet">
+  <link href="./css/desktop.css" media="screen and (min-width: 766px) and (max-width:1050px)" rel="stylesheet">
 </head>
 
 <body>
-
-  <div class="container">
-    <nav class="top-of-page">
-      <div class="logo">
-        <img src="./images/logo/Reservia.svg" alt="Reservia Logo">
-      </div>
-      <div class="navbar">
-        <a class="navbar-link " href="#accommodations">Accommodations</a>
-        <a class="navbar-link" href="#activities">Activities</a>
-        <a class="navbar-link" href="#sign up ">Sign Up</a>
-      </div>
-      <span class="navbar-tab"></span>
+  <section class="top-of-page">
+    <nav>
+      <ul class="navbar">
+        <div class="logo">
+          <img src="./images/logo/Reservia.svg" alt="Reservia Logo">
+        </div>
+        <li><a class="navbar-link" href="#accommodations">Accommodations</a></li>
+        <li><a class="navbar-link" href="#activities">Activities</a></li>
+        <li><a class="navbar-link signup" href="#">Sign Up</a> </li>
+      </ul>
     </nav>
+  </section>
 
-    <div class="top-title-and-subtitle">
-      <h2>Find a place for your dream vacation</h2>
-      <p>Downtown or in nature</p>
+  <div class="top-title-and-subtitle">
+    <h2>Find a place for your dream vacation</h2>
+    <p>Downtown or in nature</p>
+  </div>
+
+  <div class="search-row">
+    <i class="fas fa-map-marker-alt mapmarker"></i>
+    <input class="search-box" placeholder="Marseille,France" type="text">
+    <div class="search-button">
+      <i class="search">search</i>
+      <i class="fas fa-search search-icon"></i>
     </div>
+  </div>
 
-    <div class="search-row">
-      <i class="fas fa-map-marker-alt mapmarker"></i>
-      <input class="search-box" placeholder="Marseille,France" type="text">
-      <div class="search-button">
-        Search
-        <i class="fas fa-search search-icon"></i>
-      </div>
+  <div class="filter-row">
+    <div class="Filters-header">
+      <h2>Filters</h2>
     </div>
+    <button class="filter-button">
+      <span class="filter-icon"><i class="fas fa-money-bill-wave"></i></span>
+      Low cost
+    </button>
 
-    <div class="filter-row">
-      <div class="Filters-header">
-        <h2>Filters</h2>
-      </div>
-      <button class="filter-button">
-        <span class="filter-icon"><i class="fas fa-money-bill-wave"></i></span>
-        Low cost
-      </button>
+    <button class="filter-button">
+      <span class="filter-icon"><i class="fas fa-child"></i></span>
+      Family-friends
+    </button>
 
-      <button class="filter-button">
-        <span class="filter-icon"><i class="fas fa-child"></i></span>
-        Family-friends
-      </button>
+    <button class="filter-button">
+      <span class="filter-icon"><i class="fas fa-heart"></i></span>
+      Romantic
+    </button>
 
-      <button class="filter-button">
-        <span class="filter-icon"><i class="fas fa-heart"></i></span>
-        Romantic
-      </button>
+    <button class="filter-button">
+      <span class="filter-icon"><i class="fas fa-dog"></i></span>
+      Pets allowed
+    </button>
+  </div>
 
-      <button class="filter-button">
-        <span class="filter-icon"><i class="fas fa-dog"></i></span>
-        Pets allowed
-      </button>
-    </div>
-
-    <div class="information-row">
-      <div class="information">
-        <span class="info-icon"> 
-          <i class="fas fa-info"></i>
-        </span>
-        <span class="info-text">
-          More than 500 accommodations are available in this city
-        </span>
-      </div>
+  <div class="information-row">
+    <div class="information">
+      <span class="info-icon">
+        <i class="fas fa-info"></i>
+      </span>
+      <span class="info-text">
+        More than 500 accommodations are available in this city
+      </span>
     </div>
   </div>
 
   <div class="d-flex flex-direction-column-reverse flex-direction-sm-row">
     <div class="accommodations-container">
-      <h2 class="mt-0">Accommodations in Marseille</h2>
+      <div class="accommodations-header">
+        <h2 class="mt-0">Accommodations in Marseille</h2>
+      </div>
       <div class="accommodations-grid">
         <div class="col">
           <div class="card">
@@ -184,8 +188,8 @@
 
     <div class="most-popular-container">
       <div class="most-popular-header">
-      <h2 class="mt-0 most-popular-header-text">Most Popular</h2>
-      <i class="fas fa-chart-line fa-2x chartline"></i>
+        <h2 class="mt-0 ">Most Popular</h2>
+        <i class="fas fa-chart-line fa-2x chartline"></i>
       </div>
       <div class="most-popular-grid">
         <div class="card card-hori">
@@ -244,65 +248,68 @@
   <div>
     <div class="activities-container">
       <div class="activities-header">
-        <h2 class="mt-0">Activities in Marseille</h2>
+        <h2>Activities in Marseille</h2>
       </div>
-      <div class="activities-grid">
-        <div class="activitycard old-port-card ">
-          <img src="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
-            class="card-img-top card-img-no-border" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Old Port</h5>
-          </div>
-        </div>
-
-        <div class="column-2">
-          <div class="activitycard pomegues fort-card">
-            <img src="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
-              class="card-img-top card-img-no-border" alt="...">
+      <div class="activities-row">
+        <div class="col-4">
+          <div class="card card-tall ">
+            <img src="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+              class="card-img-top card-img-no-border card-img-tall" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Pomegues Fort</h5>
-            </div>
-          </div>
-
-          <div class="activitycard frioul-card">
-            <img src="./images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
-              class="card-img-top card-img-no-border" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Frioul Island</h5>
+              <h5 class="card-title">Old Port</h5>
             </div>
           </div>
         </div>
 
-        <div class="activitycard calanque-card">
-          <img src="./images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-            class="card-img-top card-img-no-border" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Calanques National Park</h5>
-          </div>
-        </div>
-        <div>
-          <div class="column-4">
-            <div class="activitycard notre-dame-card">
-              <img src="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+
+          <div class="col-4">
+            <div class="activitycard pomegues-card">
+              <img src="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                class="card-img-top card-img-no-border card-img-tall" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Pomegues Fort</h5>
+              </div>
+
+            </div>
+            <div class="activitycard frioul-card">
+              <img src="./images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
                 class="card-img-top card-img-no-border" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Notre-Dame-de-la-Garde</h5>
-
+                <h5 class="card-title">Frioul Island</h5>
               </div>
             </div>
+          </div>
 
-            <div class=" activitycard longchamp-card">
-              <img src="./images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
-                class="card-img-top card-img-no-border" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Longchamp Park</h5>
-              </div>
+        <div class="col-4">
+          <div class="card card-tall">
+            <img src="./images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+              class="card-img-top card-img-no-border" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Calanques National Park</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="activitycard notre-dame-card">
+            <img src="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+              class="card-img-top card-img-no-border" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Notre-Dame-de-la-Garde</h5>
+
+            </div>
+          </div>
+
+          <div class="activitycard longchamp-card">
+            <img src="./images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+              class="card-img-top card-img-no-border" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Longchamp Park</h5>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <footer class="footer">
