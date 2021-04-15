@@ -21,6 +21,10 @@ h5 {
     margin-top: 0;
 }
 
+.mb-1 {
+    margin-bottom: 15px;
+}
+
 #top-of-page {
     margin-bottom: 25px;
 }
@@ -28,7 +32,11 @@ h5 {
 .logo {
     display: flex;
     align-items: center;
-    float: left;   
+    padding-left: 15px;  
+}
+
+.navbar-container{
+    margin: 0 -15px;
 }
 
 .navbar {
@@ -60,6 +68,7 @@ h5 {
 .navbar li:nth-child(4) {
     order: 2;
     text-align: right;
+    flex-grow: 1;
 }
 
 .navbar-link {
@@ -109,6 +118,7 @@ h5 {
     display: flex;
     gap: 40px;
     justify-content: center;
+    margin: 0 -15px;
 }
 
 .flex-direction-column-reverse {
@@ -177,13 +187,17 @@ align-items: center;
 
 .card-text {
     border-radius: 0 0 1.25rem 1.25rem;
+    margin: 5px 0;
 }
 .card-body {
-    padding: 30px 25px;
+    padding: 15px;
     width: 100%;
 }
 .card-title {
     margin: 0;
+    height: 20px;
+    overflow: hidden;
+    font-size: 15px;
 }
 
 
@@ -198,6 +212,10 @@ align-items: center;
 
 .card-hori {
     flex-direction: row;
+}
+
+.card-hori .card-title {
+    height: auto;
 }
 
 .card-hori .card-body {
@@ -222,8 +240,14 @@ align-items: center;
     transition: 0.5s;
     display: flex;
     flex-direction: column;
-    height: 50%;
-    
+    margin-bottom: 15px;
+}
+
+.activitycard .card-img-top {
+    height: 153px;
+    border-radius: 22px 22px 0 0;
+    background-size: cover;
+    background-position: center ;
 }
 
 .card-img-top {
@@ -249,7 +273,7 @@ align-items: center;
 .accommodations-container {
     background-color: #f2f2f2;
     border-radius: 1.25rem 1.25rem;
-    padding: 40px;
+    padding: 15px;
 }
 
   .accommodations-grid {
@@ -289,19 +313,21 @@ align-items: center;
     justify-items: center;
     background-color: #f2f2f2;
     border-radius: 1.25rem 1.25rem;
-    padding: 40px;
+    padding: 15px;
   }
 
   .most-popular-grid {
         display: flex;
-        align-items: center;
+        justify-content: space-between;
         flex-direction: column;
+        height: 100%;
+
     
   }
 
   .most-popular-grid .card {
-    margin: 0 15px 15px 15px;
     width: 100%;
+    height: 168px;
   }
 
   
@@ -369,12 +395,11 @@ align-items: center;
     display: flex;
     font-weight: 800;
     font-size: 1rem;
-    padding: 1rem;
-    width: 6rem;
+    padding: 15px;
 }
 
  .search {
-     display: flex;
+     display: none;
  }
 
 
@@ -388,7 +413,8 @@ align-items: center;
 
 .row {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
+    flex-direction: column;
 }
 
 .activities-row {
@@ -399,46 +425,36 @@ align-items: center;
     margin-bottom: 40px;
 }
 
+.activities-row .card{
+    height: 150px;
+}
+
 .card-tall {
     height: 100%;
 }
 
 .card-tall .card-img-top {
     flex-grow: 1;
+    height: 86px;
 }
 
 .col-4 {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 100%;
+    max-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
 }
 
 
-
 @media (min-width:678px) {
-    .flex-direction-sm-row{
-        flex-direction: row;
+    .search-icon {
+        display: none;
     }
 
-    .accommodations-grid .col {
-         width: 50%;
+    .search {
+        display: inline;
     }
 
-    .accommodations-grid .card img {
-        width: 100%;
-        height: 125px;
-    }
-}
-
-@media(min-width:1024px){
-    .accommodations-grid .col {
-        width: 30%;
-    }
-}
-
-
-@media (min-width: 678px) {
     .navbar li {
       width: auto;
     }
@@ -470,12 +486,65 @@ align-items: center;
       border-top-width: 2px;
         border-bottom-width: 0;
     }
-}
 
-@media  (min-width: 400px) {
-      .search-icon {
-          display: none;
+    .col-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .row {
+        display: flex;
+        justify-content:space-between;
+        flex-direction: row;
+    }
+
+    .most-popular-container {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        background-color: #f2f2f2;
+        border-radius: 0;
+        padding: 15px;
       }
+
+      .pomegues-card{
+          height: 275px;
+      }
+
+      .activities-row .card{
+        height: auto;
+    }
+
+    .activities-row .card-tall{
+        height: 100%;
+    }
+
+    .activitycard {
+        background-color: white;
+        border-radius: 21px;
+        box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2) ;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}    
+
+
+@media(min-width:1024px){
+    .flex-direction-sm-row{
+        flex-direction: row;
+    }
+
+    .accommodations-grid .col {
+         width: 33%;
+    }
+
+    .accommodations-grid .card img {
+        width: 100%;
+        height: 125px;
+    }
+
 
 }
 
@@ -501,4 +570,3 @@ align-items: center;
 
 
    
-
